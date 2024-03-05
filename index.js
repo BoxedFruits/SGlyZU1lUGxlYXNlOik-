@@ -66,7 +66,7 @@ const generateParams = (ROW, COL, TILE_NAME) => {
     }
 }
 
-const solvePolyanetMap = async () => {
+const solveCurrentMap = async () => {
     const goalMap = await getGoalMap();
     const rowCount = goalMap.length;
     const colCount = goalMap[0].length;
@@ -99,7 +99,7 @@ const resetMap = async () => {
 
 (async () => {
     try {
-        await solvePolyanetMap();
+        await solveCurrentMap();
     } catch (error) {
         console.error("An error occurred:", error);
     }
